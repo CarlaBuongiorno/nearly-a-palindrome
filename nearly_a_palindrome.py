@@ -1,7 +1,10 @@
 def check_palindrome(user_input):
     cleaned_input = _clean_input(user_input)
-    cleaned_input.reverse()
-    return list(user_input) == cleaned_input and len(cleaned_input) >= 3
+    reversed_input = cleaned_input[::-1]
+    while reversed_input != cleaned_input:
+        cleaned_input.pop()
+        reversed_input.pop(0)
+    return cleaned_input == reversed_input and len(cleaned_input) >= 3
 
 
 def _clean_input(user_input):

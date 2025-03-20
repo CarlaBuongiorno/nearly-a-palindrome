@@ -11,3 +11,15 @@ def test_one_letter_palindrome_is_false():
 
 def test_three_letter_palindrome_is_true():
     assert check_palindrome('aba') == True
+
+
+def test_five_letter_palindrome_is_true():
+    assert check_palindrome('tenet') == True
+
+
+def test_nearly_a_palindrome():
+    assert check_palindrome('tenets') == True
+
+
+def test_nearly_a_palindrome_too_small():
+    assert check_palindrome('aardvark') == False

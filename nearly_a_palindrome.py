@@ -1,8 +1,8 @@
 def check_palindrome(user_input):
-    i = list(user_input)
-    if len(i) < 3:
-        return False
-    i.reverse()
-    if list(user_input) == i:
-        return True
-    return False
+    cleaned_input = _clean_input(user_input)
+    cleaned_input.reverse()
+    return list(user_input) == cleaned_input and len(cleaned_input) >= 3
+
+
+def _clean_input(user_input):
+    return list(user_input)

@@ -17,6 +17,7 @@ def test_check_palindrome_exists():
     ('lotto',           False),
     ('babble',          True),
     ("madam, i'm adam", True),
+    ("Madam, I'm Adam", True),
 ])
 def test_nearly_a_palindrome(user_input, expected):
     assert check_palindrome(user_input) == expected

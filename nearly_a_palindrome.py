@@ -7,7 +7,7 @@ def check_palindrome(user_input):
 
 
 def _clean_input(user_input):
-    return [i for i in user_input if i.isalnum()]
+    return [i.lower() for i in user_input if i.isalnum()]
 
 
 def _remove_excess_letters(cleaned_input, reversed_input):
